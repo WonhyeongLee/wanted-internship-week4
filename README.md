@@ -79,7 +79,7 @@ src
 
 #### HTTP
 
-- API: `https://interview-api.labnote.co/api`
+- API: -
 - RESOURCE: `{ GET } /search`
 
 #### Parameters
@@ -116,7 +116,7 @@ src
 
 ```javascript
 // Request
-`{ GET } https://interview-api.labnote.co/api/search?q=lorem&page=1&limit=10`
+`{ GET } -`
 
 // Response (JSON)
 {
