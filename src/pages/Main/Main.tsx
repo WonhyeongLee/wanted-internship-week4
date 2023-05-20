@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { getTodoList } from '../../api/todo'
 import Header from '../../components/Header/Header'
-import InputTodo from '../../components/inputTodo'
+import InputTodo from '../../components/inputTodo/inputTodo'
 import TodoList from '../../components/TodoList/TodoList'
 
 export interface Todo {

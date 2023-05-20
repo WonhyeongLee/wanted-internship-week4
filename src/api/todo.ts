@@ -1,4 +1,4 @@
-import { Todo } from '../pages/Main'
+import { Todo } from '../pages/Main/Main'
 
 import apiRequest from './index'
 

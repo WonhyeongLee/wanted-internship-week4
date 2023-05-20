@@ -3,8 +3,8 @@ import { FaPlusCircle, FaSpinner } from 'react-icons/fa'
 
 import { createTodo } from '../../api/todo'
 import useFocus from '../../hooks/useFocus'
-import { Todo } from '../../pages/Main'
-import RecommandKeywordList from '../SuggestedKeywordList'
+import { Todo } from '../../pages/Main/Main'
+import RecommandKeywordList from '../SuggestedKeywordList/SuggestedKeywordList'
 
 const InputTodo = ({
   setTodos

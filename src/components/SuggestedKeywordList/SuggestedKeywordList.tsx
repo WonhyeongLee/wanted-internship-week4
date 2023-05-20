@@ -5,7 +5,7 @@ import { SearchData, getSearchData } from '../../api/search'
 import useDebounce from '../../hooks/useDebounce'
 import useIntersectionObserver from '../../hooks/useInfiniteScroll'
 
-import KeywordItem from './KeywordItem'
+import KeywordItem from './KeywordItem/KeywordItem'
 import { ListContainer, LoadMoreContainer } from './style'
 
 interface SuggestedKeywordListProp {
@@ -24,6 +24,7 @@ const SuggestedKeywordList: React.FC<SuggestedKeywordListProp> = ({
   const [keywordData, setKeywordData] = useState<SearchData | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const debouncedKeyword = useDebounce(keyword, DELAY_TIME)
+
   const totalResults = keywordData?.total || 0
   const totalPages = Math.ceil(totalResults / PAGE_LIMIT) ?? 0
   const isLastPage = currentPage >= totalPages
@@ -43,8 +44,10 @@ const SuggestedKeywordList: React.FC<SuggestedKeywordListProp> = ({
   )
 
   useEffect(() => {
+    console.log(keywordData)
+
     setCurrentPage(1)
-    setKeywordData(null)
+    // setKeywordData(null)
   }, [debouncedKeyword])
 
   useEffect(() => {
